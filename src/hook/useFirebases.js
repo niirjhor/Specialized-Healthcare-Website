@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, sendSignInLinkToEmail } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import initializeAuthentication from "../components/Firebase/firebase.init"
 
 initializeAuthentication();
@@ -8,6 +8,10 @@ const useFirebases = () => {
     const auth = getAuth();
     const [user, setUser] = useState({});
     const [error, setError] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [isLogin, setIsLogin] = useState(false);
+    const [name, setName] = useState('');
 
     const signInUsingGoogle = () => {
         signInWithPopup(auth, googleProvider)
@@ -19,6 +23,44 @@ const useFirebases = () => {
                 setError(error.message)
             })
 
+    }
+
+    const toggleLogin = e => {
+        setIsLogin(e.target.checked)
+    }
+
+    const handleNameChange = e => {
+        setName(e.target.value);
+    }
+    const handleRegistration = e => {
+        e.preventDefault();
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+
+                const user = result.user;
+                console.log(user);
+                verifyEmail();
+
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+
+    }
+
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(() => {
+                // Email verification sent!
+
+            });
+    }
+    const handleEmailChange = e => {
+        setEmail(e.target.value);
+    }
+
+    const handlePasswordChange = e => {
+        setPassword(e.target.value);
     }
     const logOut = () => {
         signOut(auth)
@@ -41,7 +83,12 @@ const useFirebases = () => {
     return {
         signInUsingGoogle,
         user,
-        logOut
+        logOut,
+        handleRegistration,
+        handleEmailChange,
+        handlePasswordChange,
+        toggleLogin,
+        handleNameChange
 
     }
 }

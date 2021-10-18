@@ -4,13 +4,15 @@ import useFirebases from '../../hook/useFirebases';
 
 
 const Register = () => {
-const{user,logOut}=useFirebases();
+    const { user, logOut, handleRegistration,
+        handleEmailChange,
+        handlePasswordChange } = useFirebases();
     return (
         <div>
-            <Form>
+            <Form onSubmit={handleRegistration}>
                 <Form.Group className="mb-3 mt-3 w-50 mx-auto" controlId="formBasicEmail">
 
-                    <Form.Control type="email" placeholder="Enter email" />
+                    <Form.Control onBlur={handleEmailChange} type="email" placeholder="Enter email" />
                     <Form.Text className="text-muted">
                         We'll never share your email with anyone else.
                     </Form.Text>
@@ -19,15 +21,13 @@ const{user,logOut}=useFirebases();
 
                 <Form.Group className="mb-3 w-50  mx-auto" controlId="formBasicPassword">
 
-                    <Form.Control type="password" placeholder="Password" />
+                    <Form.Control onBlur={handlePasswordChange} type="password" placeholder="Password" />
                 </Form.Group>
                 <Form.Group className="mb-3 w-50  mx-auto" controlId="formBasicPassword">
 
-                    <Form.Control type="password" placeholder="Confirm Your Password" />
+                    <Form.Control onBlur={handlePasswordChange} type="password" placeholder="Confirm Your Password" />
                 </Form.Group>
-                <Form.Group className="mb-3 mt-3 w-50 mx-auto" controlId="formBasicEmail">
-                    <Form.Control type="email" placeholder="Enter Your Medical ID" />
-                </Form.Group>
+
 
                 <Button variant="primary" type="submit">
                     Submit
