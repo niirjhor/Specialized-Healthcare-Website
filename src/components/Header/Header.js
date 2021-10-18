@@ -6,9 +6,10 @@ import './Header.css'
 const Header = () => {
     return (
         <div>
-            <Navbar bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+
                     <Nav className="me-auto px-3">
                         <NavLink className='navlists'
                             to="/home"
@@ -39,6 +40,7 @@ const Header = () => {
                         </NavLink>
 
                     </Nav>
+                    <Navbar.Brand>Sign in as: </Navbar.Brand>
                 </Container>
             </Navbar>
         </div>
