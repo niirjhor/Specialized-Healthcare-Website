@@ -1,7 +1,10 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
+import useFirebases from '../../hook/useFirebases';
+
 
 const Register = () => {
+const{user,logOut}=useFirebases();
     return (
         <div>
             <Form>

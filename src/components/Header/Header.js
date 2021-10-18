@@ -1,9 +1,11 @@
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Header.css'
+import useFirebases from '../../hook/useFirebases';
 
 const Header = () => {
+    const { user, logOut } = useFirebases()
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -29,15 +31,10 @@ const Header = () => {
                         >
                             Services
                         </NavLink>
-                        <NavLink className='navlists'
-                            to="/login"
-                            activeStyle={{
-                                fontWeight: "bold",
-                                color: "red"
-                            }}
-                        >
-                            Login
-                        </NavLink>
+
+
+
+
                         <NavLink className='navlists'
                             to="/register"
                             activeStyle={{
@@ -47,9 +44,21 @@ const Header = () => {
                         >
                             Register
                         </NavLink>
-
+                        {user?.email ?
+                            <Button className='ms-5' onClick={logOut} variant="light">Logout</Button> :
+                            <NavLink className='navlists'
+                                to="/login"
+                                activeStyle={{
+                                    fontWeight: "bold",
+                                    color: "red"
+                                }}
+                            >
+                                Login
+                            </NavLink>}
+                        <Navbar.Text className='ms-5'>
+                            Signed in as: <a href="#login">{user?.displayName}</a>
+                        </Navbar.Text>
                     </Nav>
-                    <Navbar.Brand>Sign in as: </Navbar.Brand>
                 </Container>
             </Navbar>
         </div>

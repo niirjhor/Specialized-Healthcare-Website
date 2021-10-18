@@ -36,6 +36,7 @@ function App() {
           <Route path='/register'>
             <Register></Register>
           </Route>
+
           <Route path='*'>
             <Error> </Error>
           </Route>
