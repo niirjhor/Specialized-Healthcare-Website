@@ -35,15 +35,6 @@ const Header = () => {
 
 
 
-                        <NavLink className='navlists'
-                            to="/register"
-                            activeStyle={{
-                                fontWeight: "bold",
-                                color: "red"
-                            }}
-                        >
-                            Register
-                        </NavLink>
                         {user?.email ?
                             <Button className='ms-5' onClick={logOut} variant="light">Logout</Button> :
                             <NavLink className='navlists'

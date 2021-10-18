@@ -3,10 +3,14 @@ import { Form, Button } from 'react-bootstrap';
 import useFirebases from '../../hook/useFirebases';
 
 const Login = () => {
-    const { signInUsingGoogle, user, logOut, handleRegistration,
+    const { signInUsingGoogle, user2, logOut, handleRegistration,
         handleEmailChange,
-        handlePasswordChange, toggleLogin,
-        handleNameChange } = useFirebases();
+        handlePasswordChange,
+        handleNameChange, error } = useFirebases();
+    const [isLogin, setIsLogin] = useState(false);
+    const toggleLogin = e => {
+        setIsLogin(e.target.checked)
+    }
 
     return (
         <>
@@ -40,6 +44,10 @@ const Login = () => {
                         </div>
                     </div>
                 </div>
+                <div className="row mb-3 text-danger">{error}</div>
+                <button type="submit" className="btn btn-primary">
+                    {isLogin ? 'Login' : 'Register'}
+                </button>
             </form>
             <div>
 

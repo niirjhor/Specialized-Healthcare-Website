@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import initializeAuthentication from "../components/Firebase/firebase.init"
 
 initializeAuthentication();
@@ -7,6 +7,7 @@ const useFirebases = () => {
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
     const [user, setUser] = useState({});
+
     const [error, setError] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -46,6 +47,36 @@ const useFirebases = () => {
                 setError(error.message);
             })
 
+
+    }
+    const processLogin = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                setError('');
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
+
+    const registerNewUser = (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                setError('');
+                verifyEmail();
+                setUserName();
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
+    const setUserName = () => {
+        updateProfile(auth.currentUser, { displayName: name })
+            .then(result => { })
     }
 
     const verifyEmail = () => {
@@ -88,7 +119,8 @@ const useFirebases = () => {
         handleEmailChange,
         handlePasswordChange,
         toggleLogin,
-        handleNameChange
+        handleNameChange,
+        error
 
     }
 }
