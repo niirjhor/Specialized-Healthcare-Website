@@ -1,10 +1,9 @@
 import React from 'react';
 import { Form, Button } from 'react-bootstrap';
 
-const Login = () => {
+const Register = () => {
     return (
-
-        <>
+        <div>
             <Form>
                 <Form.Group className="mb-3 mt-3 w-50 mx-auto" controlId="formBasicEmail">
 
@@ -14,18 +13,35 @@ const Login = () => {
                     </Form.Text>
                 </Form.Group>
 
+
                 <Form.Group className="mb-3 w-50  mx-auto" controlId="formBasicPassword">
 
                     <Form.Control type="password" placeholder="Password" />
+                </Form.Group>
+                <Form.Group className="mb-3 w-50  mx-auto" controlId="formBasicPassword">
+
+                    <Form.Control type="password" placeholder="Confirm Your Password" />
+                </Form.Group>
+                <Form.Group className="mb-3 mt-3 w-50 mx-auto" controlId="formBasicEmail">
+                    <Form.Control type="email" placeholder="Enter Your Medical ID" />
                 </Form.Group>
 
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
-            </Form>
-        </>
 
+                <p>----------------------or------------------------</p>
+
+                <Button variant="primary" type="submit">
+                    Google Sign In
+                </Button>
+
+                <p>Already Have an Account?</p>
+
+
+            </Form>
+        </div>
     );
 };
 
-export default Login;
+export default Register;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, Col } from 'react-bootstrap';
+import { Button, Card, Col, Placeholder } from 'react-bootstrap';
 import './Doctor.css'
 
 const Doctor = (props) => {
@@ -21,7 +21,8 @@ const Doctor = (props) => {
 
             </Col>
 
-        </div>
+
+        </div >
     );
 };
 

@@ -30,13 +30,22 @@ const Header = () => {
                             Services
                         </NavLink>
                         <NavLink className='navlists'
-                            to="/Login"
+                            to="/login"
                             activeStyle={{
                                 fontWeight: "bold",
                                 color: "red"
                             }}
                         >
                             Login
+                        </NavLink>
+                        <NavLink className='navlists'
+                            to="/register"
+                            activeStyle={{
+                                fontWeight: "bold",
+                                color: "red"
+                            }}
+                        >
+                            Register
                         </NavLink>
 
                     </Nav>
