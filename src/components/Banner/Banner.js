@@ -6,8 +6,6 @@ const Banner = () => {
         <div>
             <div className='row'>
                 <div className='col-lg-12 col-sm-1'>
-
-
                     <Carousel>
                         <Carousel.Item>
                             <img

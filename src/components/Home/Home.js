@@ -7,8 +7,12 @@ import Experts from '../Experts/Experts';
 const Home = () => {
     return (
         <div>
-            <Banner></Banner>
-            <Experts></Experts>
+            <Container fluid className='bg-primary'>
+                <Banner></Banner>
+                <h2 className='bg-dark text-white mt-2'>Search the Best Doctors</h2>
+                <input className='mb-2' type="search" name="" id="" />
+                <Experts></Experts>
+            </Container>
         </div>
     );
 };

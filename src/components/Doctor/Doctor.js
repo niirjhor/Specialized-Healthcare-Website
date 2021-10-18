@@ -7,6 +7,7 @@ const Doctor = (props) => {
     const { id, Name, Age, specilty, img } = props.doctor
     return (
         <div>
+
             <Col>
                 <Card className='card'>
                     <Card.Img variant="top" className='doctor-img' src={img} />
@@ -17,6 +18,7 @@ const Doctor = (props) => {
                     </Card.Body>
                 </Card>
             </Col>
+
         </div>
     );
 };
