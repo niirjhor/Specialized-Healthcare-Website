@@ -16,20 +16,20 @@ const Banner = () => {
                                 alt="First slide"
                             />
                             <Carousel.Caption>
-                                <h3>First slide label</h3>
-                                <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                <h3>Minimum Cost</h3>
+                                <p>We Provide the best tests with the most affordable price</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="d-block w-100"
-                                src="https://images.unsplash.com/photo-1595541436696-9d1ed153a2ca?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZGlhZ25vc3RpY3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+                                src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZG9jdG9yc3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
                                 alt="Second slide"
                             />
 
                             <Carousel.Caption>
-                                <h3>Second slide label</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                <h3>Short Time Result</h3>
+                                <p>We Provide the Test Results in the shortest possible time</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                         <Carousel.Item>
@@ -40,8 +40,8 @@ const Banner = () => {
                             />
 
                             <Carousel.Caption>
-                                <h3>Third slide label</h3>
-                                <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                                <h3>Best Experts</h3>
+                                <p>Best Doctors are availabe 24/7</p>
                             </Carousel.Caption>
                         </Carousel.Item>
                     </Carousel>

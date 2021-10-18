@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "Name": "CBC",
+        "Rate": 300,
+        "Result": 2,
+        "img": "https://images.unsplash.com/photo-1542884841-9f546e727bca?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ymxvb2QlMjB0ZXN0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "id": 2,
+        "Name": "X-Ray",
+        "Rate": 200,
+        "Result": 1,
+        "img": "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8eCUyMHJheXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "id": 3,
+        "Name": "Hb1ac",
+        "Rate": 1000,
+        "Result": 3,
+        "img": "https://images.unsplash.com/photo-1600443271879-ac4adddb2927?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb29kJTIwdGVzdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "id": 4,
+        "Name": "Eye",
+        "Rate": 4000,
+        "Result": 4,
+        "img": "https://images.unsplash.com/photo-1582719471863-f4c7006280cd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGJsb29kJTIwdGVzdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "id": 5,
+        "Name": "CT-Scan",
+        "Rate": 3000,
+        "Result": 4,
+        "img": "https://images.unsplash.com/photo-1579154204845-5d7f8d4dc785?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGJsb29kJTIwdGVzdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+        "id": 6,
+        "Name": "CBC",
+        "Rate": 300,
+        "Result": 2,
+        "img": "https://images.unsplash.com/photo-1542884841-9f546e727bca?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ymxvb2QlMjB0ZXN0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    }
+]
