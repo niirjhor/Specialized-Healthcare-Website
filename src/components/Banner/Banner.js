@@ -14,7 +14,7 @@ const Banner = () => {
                                 alt="First slide"
                             />
                             <Carousel.Caption>
-                                <h3>Minimum Cost</h3>
+                                <h3 className='text-warning bg-dark'>Minimum Cost</h3>
                                 <p>We Provide the best tests with the most affordable price</p>
                             </Carousel.Caption>
                         </Carousel.Item>
@@ -26,7 +26,7 @@ const Banner = () => {
                             />
 
                             <Carousel.Caption>
-                                <h3>Short Time Result</h3>
+                                <h3 className='text-warning bg-dark'>Short Time Result</h3>
                                 <p>We Provide the Test Results in the shortest possible time</p>
                             </Carousel.Caption>
                         </Carousel.Item>
@@ -38,7 +38,7 @@ const Banner = () => {
                             />
 
                             <Carousel.Caption>
-                                <h3>Best Experts</h3>
+                                <h3 className='text-warning bg-dark'>Best Experts</h3>
                                 <p>Best Doctors are availabe 24/7</p>
                             </Carousel.Caption>
                         </Carousel.Item>

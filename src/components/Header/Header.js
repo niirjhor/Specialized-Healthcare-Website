@@ -8,7 +8,7 @@ const Header = () => {
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                    <Navbar.Brand href="#home"> <span className='text-warning'>Specialised</span> Diagonisic Center</Navbar.Brand>
 
                     <Nav className="me-auto px-3">
                         <NavLink className='navlists'
