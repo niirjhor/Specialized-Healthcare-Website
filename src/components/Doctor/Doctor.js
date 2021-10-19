@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card, Col, Placeholder } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Doctor.css'
 
 const Doctor = (props) => {
@@ -16,7 +17,9 @@ const Doctor = (props) => {
                         <p>Age:{Age} Years</p>
                         <p className='text-info fw-bold'>Speciality:{specilty}</p>
                     </Card.Body>
-                    <Button>Click for Appoinment</Button>
+                    <Link to={`/appointment/${id}`}>
+                        <Button>Click for Appoinment</Button>
+                    </Link>
                 </Card>
 
             </Col>

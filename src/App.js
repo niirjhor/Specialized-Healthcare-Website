@@ -12,6 +12,7 @@ import Login from './components/Login/Login';
 import Services from './components/Services/Services';
 import Register from './components/Register/Register';
 import Error from './components/Error/Error';
+import Appoinment from './components/Appoinment/Appoinment/Appoinment';
 
 
 
@@ -33,8 +34,8 @@ function App() {
           <Route path='/login'>
             <Login></Login>
           </Route>
-          <Route path='/register'>
-            <Register></Register>
+          <Route path='/appointment/:appointmentId'>
+            <Appoinment></Appoinment>
           </Route>
 
           <Route path='*'>
