@@ -17,6 +17,8 @@ import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Footer from './components/Footer/Footer';
 import Ambulances from './components/Ambulances/Ambulances';
 import Booking from './components/Booking/Booking';
+import Reviews from './components/Reviews/Reviews';
+import ShowReview from './components/ShowReview/ShowReview';
 
 
 
@@ -43,12 +45,19 @@ function App() {
             <Route path='/callAmbulance'>
               <Ambulances></Ambulances>
             </Route>
+            <Route path='/reviews'>
+              <Reviews></Reviews>
+            </Route>
             <PrivateRoute path='/appointment/:appointmentId'>
               <Appoinment></Appoinment>
             </PrivateRoute>
             <PrivateRoute path='/booking/:callAmbulanceID'>
               <Booking></Booking>
             </PrivateRoute>
+            <PrivateRoute path='/showReview/:showReviewID'>
+              <ShowReview></ShowReview>
+            </PrivateRoute>
+
             <Route path='*'>
               <Error> </Error>
             </Route>

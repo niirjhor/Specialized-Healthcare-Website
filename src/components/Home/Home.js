@@ -1,6 +1,5 @@
 import React from 'react';
-import { Carousel, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link, NavLink } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 import Banner from '../Banner/Banner';
 import Experts from '../Experts/Experts';
 

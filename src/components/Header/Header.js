@@ -41,6 +41,15 @@ const Header = () => {
                         >
                             Call An Ambulance
                         </NavLink>
+                        <NavLink className='navlists'
+                            to="/reviews"
+                            activeStyle={{
+                                fontWeight: "bold",
+                                color: "red"
+                            }}
+                        >
+                            Reviews
+                        </NavLink>
 
 
 
