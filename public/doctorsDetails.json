@@ -1,7 +1,7 @@
 {
     "appoinment": [
         {
-            "gender": "male",
+            "gender": "Male",
             "name": "Dr. Md. Akram",
             "email": "akram.com",
             "appointmentId": "1",
@@ -10,7 +10,7 @@
             }
         },
         {
-            "gender": "Female",
+            "gender": "FeMale",
             "name": "Dr. Roksana",
             "email": "Roksana.com",
             "appointmentId": "2",
@@ -19,7 +19,7 @@
             }
         },
         {
-            "gender": "male",
+            "gender": "Male",
             "name": "Dr. Ahmed",
             "email": "Ahmed.com",
             "appointmentId": "3",
@@ -28,7 +28,7 @@
             }
         },
         {
-            "gender": "male",
+            "gender": "Male",
             "name": "Dr. Nabil",
             "email": "Nabil.com",
             "appointmentId": "4",
@@ -37,7 +37,7 @@
             }
         },
         {
-            "gender": "Female",
+            "gender": "FeMale",
             "name": "Dr. Farjana",
             "email": "Farjana.com",
             "appointmentId": "5",
@@ -46,7 +46,7 @@
             }
         },
         {
-            "gender": "male",
+            "gender": "Male",
             "name": "Dr. Nirjhor",
             "email": "Nirjhor.com",
             "appointmentId": "6",

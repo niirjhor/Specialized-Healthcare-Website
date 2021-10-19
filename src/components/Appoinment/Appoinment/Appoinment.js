@@ -1,26 +1,45 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import { Card, Col, Container, Form, ListGroup, ListGroupItem, Row } from 'react-bootstrap';
+import { useParams } from "react-router-dom";
 
 const Appoinment = () => {
     const { appointmentId } = useParams();
     const [appointments, setAppointments] = useState([]);
+    const [appointment, setAppointment] = useState({});
     useEffect(() => {
         fetch('/doctorsDetails.json')
             .then(res => res.json())
-            .then(data => setAppointments(data.Appoinment))
+            .then(data => setAppointments(data.appoinment))
     }, []);
 
     useEffect(() => {
         const appointmentDetail = appointments.find(
             (appoinment) => appoinment.appointmentId === appointmentId
         );
-        setAppointments(appointmentDetail);
-    }, [appointments]);
+        setAppointment(appointmentDetail);
+    }, [appointments])
 
     return (
         <div>
 
-            This is appoinment {appointmentId}
+            <Container className='text-center mt-2'>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={appointment?.img?.thumbnail} />
+                    <Card.Body>
+                        <Card.Title>This is <span className='text-danger'>{appointment?.name}</span></Card.Title>
+                        <Card.Text>
+                            Ranked No : {appointment?.appointmentId} in our hospital
+                        </Card.Text>
+                        <Card.Text>
+                            {appointment?.gender}
+                        </Card.Text>
+                    </Card.Body>
+                    <ListGroup className="list-group-flush">
+                        <ListGroupItem>Appointment Done</ListGroupItem>
+                    </ListGroup>
+
+                </Card>
+            </Container>
         </div>
     );
 };
