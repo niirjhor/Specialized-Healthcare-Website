@@ -3,9 +3,10 @@ import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Header.css'
 import useFirebases from '../../hook/useFirebases';
+import useAuth from '../../hook/useAuth';
 
 const Header = () => {
-    const { user, logOut } = useFirebases()
+    const { user, logOut } = useAuth();
     return (
         <div>
             <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
