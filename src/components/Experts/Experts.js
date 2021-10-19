@@ -5,7 +5,7 @@ import Doctor from '../Doctor/Doctor';
 const Experts = () => {
     const [doctors, setDoctors] = useState([]);
     useEffect(() => {
-        fetch('./doctors.json')
+        fetch('/Doctors.json')
             .then(res => res.json())
             .then(data => setDoctors(data))  //fetch API data
     }, []);

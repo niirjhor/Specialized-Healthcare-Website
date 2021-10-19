@@ -63,7 +63,7 @@ const Header = () => {
                                     color: "red"
                                 }}
                             >
-                                Login
+                                Login or Register
                             </NavLink>}
                         <Navbar.Text className='ms-5'>
                             Signed in as: <a href="#login">{user?.displayName}</a>
