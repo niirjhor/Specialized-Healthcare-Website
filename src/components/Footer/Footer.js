@@ -7,7 +7,7 @@ const Footer = () => {
         <ModalFooter color="green" className="font-small footer-section pt-2 mt-4">
             <Container className="text-center">
                 <Row>
-                    <Col md="3">
+                    <Col>
                         <h5 className="title">About Us</h5>
                         <li className="list-unstyled lists">
                             <a targer='_blank' href="https://freefrontend.com/css-headers-footers/">Our History</a>
