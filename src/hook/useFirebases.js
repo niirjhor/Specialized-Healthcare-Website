@@ -7,14 +7,15 @@ const useFirebases = () => {
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
     const [user, setUser] = useState({});
-
     const [error, setError] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLogin, setIsLogin] = useState(false);
     const [name, setName] = useState('');
+    const [isLoading, setIsLoading] = useState(true)
 
     const signInUsingGoogle = () => {
+        setIsLoading(true);
         signInWithPopup(auth, googleProvider)
             .then((result) => {
                 console.log(result.user)
@@ -22,6 +23,9 @@ const useFirebases = () => {
             })
             .catch((error) => {
                 setError(error.message)
+            })
+            .finally(() => {
+                setIsLoading(false);
             })
 
     }
@@ -34,6 +38,7 @@ const useFirebases = () => {
         setName(e.target.value);
     }
     const handleRegistration = e => {
+        setIsLoading(true);
         e.preventDefault();
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
@@ -46,10 +51,14 @@ const useFirebases = () => {
             .catch(error => {
                 setError(error.message);
             })
+            .finally(() => {
+                setIsLoading(false);
+            })
 
 
     }
     const processLogin = (email, password) => {
+        setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
@@ -59,9 +68,13 @@ const useFirebases = () => {
             .catch(error => {
                 setError(error.message);
             })
+            .finally(() => {
+                setIsLoading(false);
+            })
     }
 
     const registerNewUser = (email, password) => {
+        setIsLoading(true);
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
@@ -72,6 +85,9 @@ const useFirebases = () => {
             })
             .catch(error => {
                 setError(error.message);
+            })
+            .finally(() => {
+                setIsLoading(false);
             })
     }
     const setUserName = () => {
@@ -94,21 +110,28 @@ const useFirebases = () => {
         setPassword(e.target.value);
     }
     const logOut = () => {
+        setIsLoading(true);
         signOut(auth)
             .then(() => {
                 setUser();
             })
             .catch((error) => {
                 setError('')
-            });
+            })
+            .finally(() => {
+                setIsLoading(false);
+            })
     }
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
 
                 setUser(user)
-
             }
+            else {
+                setUser({})
+            }
+            setIsLoading(false)
         });
     }, [])
     return {
@@ -120,7 +143,8 @@ const useFirebases = () => {
         handlePasswordChange,
         toggleLogin,
         handleNameChange,
-        error
+        error,
+        isLoading
 
     }
 }
