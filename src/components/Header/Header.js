@@ -2,7 +2,6 @@ import React from 'react';
 import { Container, Nav, Navbar, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import './Header.css'
-import useFirebases from '../../hook/useFirebases';
 import useAuth from '../../hook/useAuth';
 
 const Header = () => {
@@ -50,9 +49,6 @@ const Header = () => {
                         >
                             Reviews
                         </NavLink>
-
-
-
 
                         {user?.email ?
                             <Button className='ms-5' onClick={logOut} variant="light">Logout</Button> :

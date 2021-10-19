@@ -56,13 +56,13 @@ const useFirebases = () => {
             })
 
 
+
     }
     const processLogin = (email, password) => {
         setIsLoading(true);
         signInWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
                 setError('');
             })
             .catch(error => {
@@ -122,8 +122,9 @@ const useFirebases = () => {
                 setIsLoading(false);
             })
     }
+
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
+        const unsubscribed = onAuthStateChanged(auth, (user) => {
             if (user) {
 
                 setUser(user)
@@ -133,7 +134,8 @@ const useFirebases = () => {
             }
             setIsLoading(false)
         });
-    }, [])
+        return () => unsubscribed;
+    }, []);
     return {
         signInUsingGoogle,
         user,
