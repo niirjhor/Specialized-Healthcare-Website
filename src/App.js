@@ -14,6 +14,9 @@ import Error from './components/Error/Error';
 import Appoinment from './components/Appoinment/Appoinment/Appoinment';
 import AuthProvider from './components/context/AuthProvider';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import Footer from './components/Footer/Footer';
+import Ambulances from './components/Ambulances/Ambulances';
+import Booking from './components/Booking/Booking';
 
 
 
@@ -37,14 +40,22 @@ function App() {
             <Route path='/login'>
               <Login></Login>
             </Route>
+            <Route path='/callAmbulance'>
+              <Ambulances></Ambulances>
+            </Route>
             <PrivateRoute path='/appointment/:appointmentId'>
               <Appoinment></Appoinment>
+            </PrivateRoute>
+            <PrivateRoute path='/booking/:callAmbulanceID'>
+              <Booking></Booking>
             </PrivateRoute>
             <Route path='*'>
               <Error> </Error>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
+
       </AuthProvider>
     </div>
   );

@@ -32,6 +32,15 @@ const Header = () => {
                         >
                             Services
                         </NavLink>
+                        <NavLink className='navlists'
+                            to="/callAmbulance"
+                            activeStyle={{
+                                fontWeight: "bold",
+                                color: "red"
+                            }}
+                        >
+                            Call An Ambulance
+                        </NavLink>
 
 
 

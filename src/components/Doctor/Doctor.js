@@ -5,7 +5,7 @@ import './Doctor.css'
 
 const Doctor = (props) => {
 
-    const { id, Name, Age, specilty, img } = props.doctor
+    const { id, Name, Age, specilty, img } = props?.doctor || {};
     return (
         <div>
 

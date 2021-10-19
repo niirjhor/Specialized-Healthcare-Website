@@ -7,11 +7,11 @@ const useFirebases = () => {
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth();
     const [user, setUser] = useState({});
+    const [username, setUsername] = useState({});
     const [error, setError] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLogin, setIsLogin] = useState(false);
-    const [name, setName] = useState('');
     const [isLoading, setIsLoading] = useState(true)
 
     const signInUsingGoogle = () => {
@@ -35,7 +35,7 @@ const useFirebases = () => {
     }
 
     const handleNameChange = e => {
-        setName(e.target.value);
+        setUsername(e.target.value);
     }
     const handleRegistration = e => {
         setIsLoading(true);
@@ -81,7 +81,7 @@ const useFirebases = () => {
                 console.log(user);
                 setError('');
                 verifyEmail();
-                setUserName();
+                setName();
             })
             .catch(error => {
                 setError(error.message);
@@ -90,8 +90,8 @@ const useFirebases = () => {
                 setIsLoading(false);
             })
     }
-    const setUserName = () => {
-        updateProfile(auth.currentUser, { displayName: name })
+    const setName = () => {
+        updateProfile(auth.currentUser, { displayName: username })
             .then(result => { })
     }
 
@@ -144,7 +144,8 @@ const useFirebases = () => {
         toggleLogin,
         handleNameChange,
         error,
-        isLoading
+        isLoading,
+        setName
 
     }
 }

@@ -35,7 +35,7 @@ const Appoinment = () => {
                         </Card.Text>
                     </Card.Body>
                     <ListGroup className="list-group-flush">
-                        <ListGroupItem>Appointment Done</ListGroupItem>
+                        <ListGroupItem className='bg-primary'>Appointment Done</ListGroupItem>
                     </ListGroup>
 
                 </Card>

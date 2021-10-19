@@ -3,7 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import useFirebases from '../../hook/useFirebases';
 
 const Login = () => {
-    const { signInUsingGoogle, user2, logOut, handleRegistration,
+    const { signInUsingGoogle, handleRegistration,
         handleEmailChange,
         handlePasswordChange,
         handleNameChange, error } = useFirebases();
