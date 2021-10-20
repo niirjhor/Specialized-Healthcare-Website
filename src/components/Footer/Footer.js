@@ -5,10 +5,10 @@ import './Footer.css'
 const Footer = () => {
     return (
         <ModalFooter className="font-small text-dark justify-content-center mt-5">
-            <Container className="">
+            <Container fluid className="bg-dark">
                 <Row>
                     <Col>
-                        <h5 className="title">About Us</h5>
+                        <h5 className="title text-white">About Us</h5>
                         <li className="list-unstyled lists">
                             <a targer='_blank' href="https://freefrontend.com/css-headers-footers/">Our History</a>
                         </li>
@@ -21,7 +21,7 @@ const Footer = () => {
 
                     </Col>
                     <Col md="3">
-                        <h5 className="title">Careers</h5>
+                        <h5 className="title text-white">Careers</h5>
                         <li className="list-unstyled">
                             <a href="https://freefrontend.com/css-headers-footers/">Education Opportunities</a>
                         </li>
@@ -34,7 +34,7 @@ const Footer = () => {
 
                     </Col>
                     <Col md="3">
-                        <h5 className="title">Contact Us</h5>
+                        <h5 className="title text-white">Contact Us</h5>
                         <li className="list-unstyled">
                             <a href="https://freefrontend.com/css-headers-footers/">Donations</a>
                         </li>
@@ -47,7 +47,7 @@ const Footer = () => {
 
                     </Col>
                     <Col>
-                        <h5 className="title">Extra</h5>
+                        <h5 className="title text-white">Extra</h5>
                         <li className="list-unstyled">
                             <a href="https://freefrontend.com/css-headers-footers/">Trending Now</a>
                         </li>
@@ -60,8 +60,9 @@ const Footer = () => {
 
                     </Col>
                 </Row>
+                <p className='text-footer text-white justify-content-center'>© Copyright Specialist Diagonistic Center 2021 | All Rights Reserved | Privacy Policy</p>
             </Container>
-            <p className='text-footer justify-content-center'>© Copyright Specialist Diagonistic Center 2021 | All Rights Reserved | Privacy Policy</p>
+
         </ModalFooter>
     );
 };
