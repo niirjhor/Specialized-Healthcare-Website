@@ -12,13 +12,15 @@ const Experts = () => {
 
     return (
         <div>
-            <Row xs={1} md={2} className="g-4">
-                {
-                    doctors?.map(doctor => <Doctor
-                        doctor={doctor}
-                        key={doctor.id}></Doctor>)
-                }
-            </Row>
+            <div className="container">
+                <Row xs={1} md={2} className="g-4">
+                    {
+                        doctors?.map(doctor => <Doctor
+                            doctor={doctor}
+                            key={doctor.id}></Doctor>)
+                    }
+                </Row>
+            </div>
         </div>
     );
 };

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Ambulance from './Ambulance/Ambulance';
+import Ambulance from '../Ambulance/Ambulance';
 import { Row } from 'react-bootstrap';
 
 const Ambulances = () => {
@@ -10,8 +10,8 @@ const Ambulances = () => {
             .then(data => setAmbulances(data))
     }, [])
     return (
-        <div className=''>
-            <h2 className=''>Book an Ambulance</h2>
+        <div>
+            <h2 className='text-danger fw-bold'>Book an Ambulance</h2>
             <Row xs={1} md={2} className="g-4">
                 {
                     ambulances.map(ambulance => <Ambulance ambulance={ambulance}

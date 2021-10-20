@@ -8,19 +8,21 @@ const Ambulance = (props) => {
 
     return (
         <div>
-            <Col>
-                <Card className='card'>
-                    <Card.Img variant="top" className='amb-img' src={img} />
-                    <Card.Body>
-                        <Card.Title className='fw-bold'>Quality:{Name}</Card.Title>
-                        <p className='fw-bold'>Rate: {Rate}Taka</p>
-                    </Card.Body>
-                    <Link to={`/booking/${id}`}>
-                        <Button className='text-dark bg-warning'>Book Ambulance</Button>
-                    </Link>
-                </Card>
+            <div className="container">
+                <Col>
+                    <Card className='card'>
+                        <Card.Img variant="top" className='amb-img' src={img} />
+                        <Card.Body>
+                            <Card.Title className='fw-bold'>Quality:{Name}</Card.Title>
+                            <p className='fw-bold'>Rate: {Rate}Taka</p>
+                        </Card.Body>
+                        <Link to={`/booking/${id}`}>
+                            <Button className='text-dark bg-warning'>Book Ambulance</Button>
+                        </Link>
+                    </Card>
 
-            </Col>
+                </Col>
+            </div>
         </div >
     );
 };

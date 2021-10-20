@@ -6,11 +6,12 @@ const Review = (props) => {
     const { id, Name, img } = props.review;
     return (
         <div>
-            <Col>
+            <Col className='container'>
                 <Card className='card'>
                     <Card.Img variant="top" className='amb-img' src={img} />
                     <Card.Body>
                         <Card.Title className='fw-bold'>Name of the reviewer:{Name}</Card.Title>
+                        <p>One of our most trusted patients</p>
                     </Card.Body>
                     <Link to={`/showReview/${id}`}>
                         <Button className='text-dark bg-warning'>See Details</Button>

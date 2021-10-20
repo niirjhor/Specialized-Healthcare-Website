@@ -12,8 +12,8 @@ const Services = () => {
 
     return (
         <div>
-            <Container fluid className='bg-warning fw-bold'>
-                <h3 className='text-danger pt-2'>More than 400 Test are available</h3>
+            <Container fluid className='bg-light fw-bold'>
+                <h3 className='text-danger fw-bold pt-2'>More than 400 Test are available</h3>
                 <br />
                 <h4 className='text-dark fw-bold pb-2'>Some of the tests are listed below with price</h4>
                 <Row xs={1} md={2} className="g-4">

@@ -6,7 +6,7 @@ const Service = (props) => {
 
     return (
         <div>
-            <Col>
+            <Col className='container'>
                 <Card className='card'>
                     <Card.Img variant="top" className='doctor-img' src={img} />
                     <Card.Body>

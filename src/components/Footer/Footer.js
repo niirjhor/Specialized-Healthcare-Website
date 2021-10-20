@@ -4,8 +4,8 @@ import { Col, Container, ModalFooter, Row } from 'react-bootstrap';
 import './Footer.css'
 const Footer = () => {
     return (
-        <ModalFooter color="green" className="font-small footer-section pt-2 mt-4">
-            <Container className="text-center">
+        <ModalFooter className="font-small text-dark justify-content-center mt-5">
+            <Container className="">
                 <Row>
                     <Col>
                         <h5 className="title">About Us</h5>
@@ -46,7 +46,7 @@ const Footer = () => {
                         </li>
 
                     </Col>
-                    <Col md="3">
+                    <Col>
                         <h5 className="title">Extra</h5>
                         <li className="list-unstyled">
                             <a href="https://freefrontend.com/css-headers-footers/">Trending Now</a>
@@ -61,7 +61,7 @@ const Footer = () => {
                     </Col>
                 </Row>
             </Container>
-            <p className='text-footer me-5'>© Copyright Specialist Diagonistic Center 2021 | All Rights Reserved | Privacy Policy</p>
+            <p className='text-footer justify-content-center'>© Copyright Specialist Diagonistic Center 2021 | All Rights Reserved | Privacy Policy</p>
         </ModalFooter>
     );
 };

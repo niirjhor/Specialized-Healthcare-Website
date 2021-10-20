@@ -14,12 +14,9 @@ const ShowReview = () => {
 
                     <Modal.Body>
                         <p>See Reviews of  <span className='text-danger fw-bold'>No{showReviewID}</span> </p>
+                        <p>Very Good Diagonistic Service</p>
                     </Modal.Body>
 
-                    <Modal.Footer>
-                        <Button variant="secondary">Close</Button>
-                        <Button variant="primary">Save changes</Button>
-                    </Modal.Footer>
                 </Modal.Dialog>
 
             </div>

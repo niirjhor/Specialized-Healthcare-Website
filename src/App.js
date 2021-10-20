@@ -7,7 +7,7 @@ import {
   Link
 } from "react-router-dom";
 import Header from './components/Header/Header';
-import Home from './components/Home/Home';
+
 import Login from './components/Login/Login';
 import Services from './components/Services/Services';
 import Error from './components/Error/Error';
@@ -15,10 +15,11 @@ import Appoinment from './components/Appoinment/Appoinment/Appoinment';
 import AuthProvider from './components/context/AuthProvider';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Footer from './components/Footer/Footer';
-import Ambulances from './components/Ambulances/Ambulances';
+import Ambulances from './components/Ambulances/Ambulances/Ambulances';
 import Booking from './components/Booking/Booking';
 import Reviews from './components/Reviews/Reviews';
 import ShowReview from './components/Reviews/ShowReview/ShowReview';
+import Home from './components/Home/Home/Home';
 
 
 

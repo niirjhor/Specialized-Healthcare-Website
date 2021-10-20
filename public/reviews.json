@@ -1,44 +1,44 @@
 [
     {
         "id": 1,
-        "Name": "Dr. Md. Akram",
+        "Name": "Mr. Abin",
         "Age": 40,
         "specilty": "Medicine",
-        "img": "https://images.unsplash.com/photo-1524666041070-9d87656c25bb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        "img": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bW9kZWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
     },
     {
         "id": 2,
-        "Name": "Dr. Roksana",
+        "Name": "Roksana",
         "Age": 40,
         "specilty": "Child Specialist",
-        "img": "https://images.unsplash.com/photo-1560535733-540e0b0068b9?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZmVtYWxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        "img": "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bW9kZWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
     },
     {
         "id": 3,
-        "Name": "Dr. Ahmed",
+        "Name": "Sabil Ahmed",
         "Age": 40,
         "specilty": "Child",
         "img": "https://images.unsplash.com/photo-1524666041070-9d87656c25bb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
     },
     {
         "id": 4,
-        "Name": "Dr. Nabil",
+        "Name": "Nabil",
         "Age": 40,
         "specilty": "Neuro",
-        "img": "https://images.unsplash.com/photo-1524666041070-9d87656c25bb?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bWFsZXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        "img": "https://images.unsplash.com/photo-1507114845806-0347f6150324?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fG1vZGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
     },
     {
         "id": 5,
-        "Name": "Dr. Farjana",
+        "Name": "Farjana",
         "Age": 32,
         "specilty": "Medicine",
-        "img": "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8ZmVtYWxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        "img": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8bW9kZWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
     },
     {
         "id": 6,
-        "Name": "Dr. Nirjhor",
+        "Name": "Nirjhor",
         "Age": 42,
         "specilty": "Medicine",
-        "img": "https://images.unsplash.com/photo-1614786269829-d24616faf56d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZmVtYWxlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+        "img": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fG1vZGVsfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
     }
 ]

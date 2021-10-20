@@ -14,12 +14,9 @@ const Booking = () => {
 
                 <Modal.Body>
                     <p>Booking confirmation for <span className='text-danger fw-bold'>Ambulance{callAmbulanceID}</span> </p>
+                    <button>Booking Done</button>
                 </Modal.Body>
 
-                <Modal.Footer>
-                    <Button variant="secondary">Close</Button>
-                    <Button variant="primary">Save changes</Button>
-                </Modal.Footer>
             </Modal.Dialog>
 
         </div>
