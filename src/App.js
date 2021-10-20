@@ -18,7 +18,7 @@ import Footer from './components/Footer/Footer';
 import Ambulances from './components/Ambulances/Ambulances';
 import Booking from './components/Booking/Booking';
 import Reviews from './components/Reviews/Reviews';
-import ShowReview from './components/ShowReview/ShowReview';
+import ShowReview from './components/Reviews/ShowReview/ShowReview';
 
 
 

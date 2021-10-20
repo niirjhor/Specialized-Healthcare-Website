@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
-import Banner from '../Banner/Banner';
-import Experts from '../Experts/Experts';
+import Banner from './Banner/Banner';
+import Experts from './Experts/Experts';
 
 const Home = () => {
     return (

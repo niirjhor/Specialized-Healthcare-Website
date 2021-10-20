@@ -1,16 +1,115 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import useFirebases from '../../hook/useFirebases';
+import { Button } from 'react-bootstrap';
+import { useHistory, useLocation } from 'react-router';
+import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+
+import useAuth from '../../hook/useAuth';
 
 const Login = () => {
-    const { signInUsingGoogle, handleRegistration,
-        handleEmailChange,
-        handlePasswordChange,
-        handleNameChange, error } = useFirebases();
+    const auth = getAuth();
+    const [username, setUserName] = useState('');
+    const { signInUsingGoogle, setIsLoading } = useAuth();
+
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [error, setError] = useState('');
     const [isLogin, setIsLogin] = useState(false);
-    const toggleLogin = e => {
-        setIsLogin(e.target.checked)
+    const location = useLocation();
+    const history = useHistory();
+    const redirect_url = location.state?.from || '/home';
+    console.log('came from', location.state?.from);
+
+
+    const handleGoogleLogin = () => {
+        signInUsingGoogle()
+            .then(result => {
+                history.push(redirect_url)
+            })
+
+            .finally(() => setIsLoading(false));
     }
+    const toggleLogin = e => {
+
+        setIsLogin((e.target.checked));
+    }
+    const handleNameChange = e => {
+        setUserName(e.target.value)
+    }
+    const handleEmailChange = e => {
+        setEmail(e.target.value);
+    }
+    const handlePasswordChange = e => {
+        setPassword(e.target.value);
+    }
+    const handleRegistration = e => {
+        e.preventDefault();
+
+        console.log(email, password);
+        if (password.length < 8) {
+            setError('Password must be atleast 8 characters')
+            return;
+        }
+
+
+        if (isLogin) {
+            processLogin(email, password);
+        }
+        else {
+            createNewUser(email, password);
+
+        }
+    }
+    const processLogin = (email, password) => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then((result) => {
+                const user = result.user;
+                history.push(redirect_url);
+
+                console.log(user);
+                setError('');
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+
+    }
+    const createNewUser = (email, password) => {
+        createUserWithEmailAndPassword(auth, email, password)
+
+            .then((result) => {
+                const user = result.user;
+                console.log(user);
+                setError('');
+                verifyEmail();
+                setName();
+                history.push(redirect_url)
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+
+    }
+    const setName = () => {
+        updateProfile(auth.currentUser, { displayName: username })
+            .then(result => {
+                window.location.reload();
+            })
+    }
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(result => {
+
+
+            })
+            .catch(error => {
+                setError(error.message);
+            })
+    }
+
+
+
+
+
 
     return (
         <>
@@ -55,7 +154,7 @@ const Login = () => {
                 <div>--------or--------</div>
 
 
-                <Button onClick={signInUsingGoogle} variant="primary" type="submit">
+                <Button onClick={handleGoogleLogin} variant="primary" type="submit">
                     Google Sign In
                 </Button>
 
